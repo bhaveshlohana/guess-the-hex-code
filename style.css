@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+h1,
+#restart,
+#match {
+  text-align: center;
+  padding: 20px;
+}
+#match {
+  font-size: 2rem;
+}
+span {
+  text-transform: uppercase;
+  font-style: italic;
+  border-bottom: medium dashed;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#first,
+#second,
+#third {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px 5px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 3px 8px 8px 1px #bfc9ca;
+}
+
+.myButton {
+  background-color: #1c2833;
+
+  border-radius: 5px 20px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  border: none;
+  padding: 16px 42px;
+  text-decoration: none;
+  box-shadow: 2px 5px 8px 1px #888888;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+.myButton:focus {
+  outline: none;
+}
+#result {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 45%;
+  bottom: 30px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#result.show {
+  visibility: visible;
+  transform: all 0.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.8s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
